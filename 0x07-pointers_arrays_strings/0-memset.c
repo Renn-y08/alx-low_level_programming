@@ -6,16 +6,16 @@
  * @b: the desired value
  * @n: number of bytes to be changed
  *
- * Return: changed array with hnew value for n bytes
+ * Return: changed array with new value for n bytes
  */
-char *_memset(char *s, char b, unsigned int n);
-{
-	int i = 0;
 
-	for (; n > 0; i++)
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *p = s;
+
+	while (n--)
 	{
-		s[i] = b;
-		n--;
+		*p++ = b;
 	}
 	return (s);
 }
